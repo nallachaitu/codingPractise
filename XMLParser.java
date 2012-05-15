@@ -1,6 +1,6 @@
 /*
- * The program takes an XML file as an input and constructs a hashmap with a structure matching the input XML file elements structure.
- *
+ * The program takes an XML file as an input and constructs a hashmap with a structure 
+ * matching the input XML file elements structure.
  */
 
 import java.io.File;
