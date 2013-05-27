@@ -21,6 +21,18 @@ public ComputeNumberOfWays
 		 * since the number of ways for throwing dice given only dice is always one irrespective of the value. 
 		 */
 		intialize(arr,n,x);
+		for(int i=2; i <= n ; i++)
+		{
+			for(int j=1; j <= x ; j++)
+			{
+				for(int k=1 ; k <=m  && k <= j ; k++)
+				{
+					arr[i][j] += arr[i-1][j-k];
+				}
+			}
+		}
+		
+		return arr[n][x];
 	}
 	
 	/**
@@ -29,7 +41,11 @@ public ComputeNumberOfWays
 	 */
 	void intialize(long[][] arr,int n,int x)
 	{
-		
+		for(int j=1;j <= x; j++)
+		{
+			arr[1][j] = 1;
+		}
+		return;
 	}
 	
 }
