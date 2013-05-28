@@ -12,7 +12,7 @@ public ComputeNumberOfWays
 	 * Main function for computing the number of possible ways of throwing dice which 
 	 * would sum upto x.
 	 */
-	long computeWays(int m, int n, int x)
+	public static long computeWays(int m, int n, int x)
 	{
 		// using one additional row and column to start the numbering from 1
 		long[][] arr = new long[n+1][x+1];
@@ -25,7 +25,7 @@ public ComputeNumberOfWays
 		{
 			for(int j=1; j <= x ; j++)
 			{
-				for(int k=1 ; k <=m  && k <= j ; k++)
+				for(int k=1; k <=m  && k <= j; k++)
 				{
 					arr[i][j] += arr[i-1][j-k];
 				}
@@ -43,9 +43,15 @@ public ComputeNumberOfWays
 	{
 		for(int j=1;j <= x; j++)
 		{
-			arr[1][j] = 1;
+			arr[1][j] = 1L;
 		}
 		return;
+	}
+	
+	public static void main(String[] args)
+	{
+		long val = ComputeNumberOfWays.computeWays(6,3,4);
+		System.out.println("The number of values possible are " + val);
 	}
 	
 }
