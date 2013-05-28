@@ -39,7 +39,7 @@ public ComputeNumberOfWays
 	 * It initializes the passed array by filling all the columns of the first row(with index 1) with 1.
 	 * 
 	 */
-	void intialize(long[][] arr,int n,int x)
+	private static void intialize(long[][] arr,int n,int x)
 	{
 		for(int j=1;j <= x; j++)
 		{
